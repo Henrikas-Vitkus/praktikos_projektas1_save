@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervacija</title>
+    <link rel="stylesheet" href="appointment.css">
+    <script src="https://kit.fontawesome.com/52a9feb123.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="appointment.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="pagrindinis_logo_div">
+            <div class="pagrindinis_logo">Ihenrika</div>
+        </div>
+        <div class="header_mygtukai_div">
+            <button onclick="window.location.href='index.html';" class="pagrindinis">Pagrindinis</button>
+            <button onclick="window.location.href='appointment.html';" class="rezervacija">Rezervacija</button>
+            <button onclick="window.location.href='paslaugos.html';" class="paslaugos">Paslaugos</button>
+            <button onclick="window.location.href='galerija.html';" class="galerija">Galerija</button>
+            <button onclick="window.location.href='kontaktai.html';" class="kontaktai">Kontaktai</button>
+            <button id="logout_button">Atsijungti</button>
+            <div class="dropdown_menu" id="dropdownMenu"> 
+                <i class="fa-solid fa-bars" id="dropdownIcon"></i>
+                <div class="dropdown-content">
+                    <a href="index.html">Pagrindinis</a>
+                    <a href="appointment.html">Rezervacija</a>
+                    <a href="paslaugos.html">Paslaugos</a>
+                    <a href="galerija.html">Galerija</a>
+                    <a href="kontaktai.html">Kontaktai</a>
+                    <a href="login.html">Prisijungti</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="appointment_page">
+        <h2>Rezervuokite vietą vizitui</h2>
+
+        <form id="appointmentForm">
+            <!-- Date Picker -->
+            <label for="appointmentDate">Pasirinkite datą:</label>
+            <input type="date" id="appointmentDate" required><br><br>
+
+            <!-- Service Selection -->
+            <label for="serviceSelect">Pasirinkite paslaugą:</label>
+            <select id="serviceSelect" required>
+                <option value="Moterų kirpimas">Moterų kirpimas</option>
+                <option value="Moterų kirpimas (trumpa šukuosena)">Moterų kirpimas (trumpa šukuosena)</option>
+                <option value="Vyrų kirpimas">Vyrų kirpimas</option>
+                <option value="Vyrų kirpimas mašinėle">Vyrų kirpimas mašinėle</option>
+                <option value="Vaikų kirpimas">Vaikų kirpimas</option>
+                <option value="Plaukų šaknų dažymas ir kirpimas">Plaukų šaknų dažymas ir kirpimas</option>
+                <option value="Plaukų šaknu dažymas">Plaukų šaknu dažymas</option>
+                <option value="Visų plaukų dažymas">Visų plaukų dažymas</option>
+                <option value="Plaukų dažymas sruogelėmis">Plaukų dažymas sruogelėmis</option>
+                <option value="Plaukų balinimas">Plaukų balinimas</option>
+                <option value="Kasdienis šukavimas">Kasdienis šukavimas</option>
+                <option value="Proginė šukuosena">Proginė šukuosena</option>
+                <option value="Vestuvinė šukuosena">Vestuvinė šukuosena</option>
+            </select><br><br>
+
+            <label for="laikas">Pasirinkite laiką:</label>
+            <select id="laikas" required>
+                <option value="9:00">9:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitAppointment">Užsirašyti</button>
+        </form>
+    </div> 
+    <div id="appointmentPopup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <h3>Jūsų rezervacija sėkminga!</h3>
+            <p>Data: <span id="popupDate"></span></p>
+            <p>Laikas: <span id="popupTime"></span></p>
+            <p>Paslauga: <span id="popupService"></span></p>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer_meniu1">
+                <p class="footer_meniu_pavadinimas">Meniu</p>
+                <div class="meniu_nuorodos">
+                    <a href="index.html">Pagrindinis</a>
+                    <a href="appointment.html">Rezervacija</a>
+                    <a href="paslaugos.html">Paslaugos</a>
+                    <a href="galerija.html">Galerija</a>
+                    <a href="kontaktai.html">Kontaktai</a>
+                </div>
+            </div>
+            <div class="footer_meniu">
+                <p class="footer_meniu_pavadinimas" >Susisiekime</p>
+                <div class="meniu_nuorodos">
+                    <div class="vieta">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Bažnyčios g. 13-1, Viekšniai</p>
+                    </div>
+                    <div class="telefonas">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>865544332</p>
+                    </div>
+                    <div class="gamilas">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>ihenrika.salon@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="darbo_laikas_div">
+                <div class="footer_meniu">
+                    <p class="footer_meniu_pavadinimas_laikas">Darbo laikas</p>   
+                    <div class="darbo_laikas">
+                        <p>Pirmadienis-Penktadienis: 9-17</p>
+                        <p>Šeštadienis: 10-15</p>
+                        <p>Sekmadienis: nedirbame</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDHRwZ4DCbFtrKFxRrxxxQj3VBtvbGSVr4",
+        authDomain: "ihenrkalogin.firebaseapp.com",
+        projectId: "ihenrkalogin",
+        storageBucket: "ihenrkalogin.firebasestorage.app",
+        messagingSenderId: "848486696023",
+        appId: "1:848486696023:web:b22dd2a29112add1ef0f12"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Check if the user is logged in
+    onAuthStateChanged(auth, (user) => {
+        if (!user) {
+            // If the user is not logged in, redirect to the login page
+            window.location.href = "login.html";
+        }
+    });
+</script>
+<script type="module" src="authentication.js"></script>
+<script src="header_animation.js"></script>
+<script src="dropdown.js"></script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija</title>
+    <link rel="stylesheet" href="galerija.css">
+    <script src="https://kit.fontawesome.com/52a9feb123.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header>
+        <div class="pagrindinis_logo_div">
+            <div class="pagrindinis_logo">Ihenrika</div>
+        </div>
+        <div class="header_mygtukai_div">
+            <button onclick="window.location.href='index.html';" class="pagrindinis">Pagrindinis</button>
+            <button onclick="window.location.href='appointment.html';" class="rezervacija">Rezervacija</button>
+            <button onclick="window.location.href='paslaugos.html';" class="paslaugos">Paslaugos</button>
+            <button onclick="window.location.href='galerija.html';" class="galerija">Galerija</button>
+            <button onclick="window.location.href='kontaktai.html';" class="kontaktai">Kontaktai</button>
+            <button id="logout_button">Atsijungti</button>
+        </div> 
+    </header> 
+    <div class="moteru_galerija_pavadinimas">
+        <p class="moteru_galerija_zodis">Vyru Galerija</p>
+    </div>
+    <div class="galerijos_background">
+        <div class="moteru_galerija">
+            <div class="box"><img src="images/men_hair1.jpg" alt="Hair 1" onclick="openModal(0)" style="width: 290px; height: 400px;"></div>
+            <div class="box"><img src="images/men_hair2.jpg" alt="Hair 2" onclick="openModal(1)" style="width: 290px; height: 400px;"></div>
+            <div class="box"><img src="images/men_hair3.jpg" alt="Hair 3" onclick="openModal(2)" style="width: 290px; height: 400px;"></div>
+            <div class="box"><img src="images/men_hair4.jpg" alt="Hair 4" onclick="openModal(3)" style="width: 290px; height: 400px;"></div>
+            <div class="box"><img src="images/men_hair5.jpg" alt="Hair 5" onclick="openModal(4)" style="width: 290px; height: 400px;"></div>
+            <div class="box"><img src="images/men_hair6.jpg" alt="Hair 6" onclick="openModal(5)" style="width: 290px; height: 400px;"></div>
+            <div class="box"><img src="images/men_hair7.jpg" alt="Hair 7" onclick="openModal(6)" style="width: 290px; height: 400px;"></div>
+            <div class="box"><img src="images/men_hair8.jpg" alt="Hair 8" onclick="openModal(7)" style="width: 290px; height: 400px;"></div>
+        </div>
+    </div>
+    <div id="slideshowModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="slideshowImage" src="" alt="">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer_meniu1">
+                <p class="footer_meniu_pavadinimas">Meniu</p>
+                <div class="meniu_nuorodos">
+                    <a>Pagrindinis</a>
+                    <a>Apie mus</a>
+                    <a>Paslaugos</a>
+                    <a>Galerija</a>
+                    <a>Kontaktai</a>
+                </div>
+            </div>
+            <div class="footer_meniu">
+                <p class="footer_meniu_pavadinimas" >Susisiekime</p>
+                <div class="meniu_nuorodos">
+                    <div class="vieta">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Bažnyčios g. 13-1, Viekšniai</p>
+                    </div>
+                    <div class="telefonas">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>865544332</p>
+                    </div>
+                    <div class="gamilas">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>renatavitkute@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_meniu">
+                <p class="footer_meniu_pavadinimas_laikas">Darbo laikas</p>   
+                <div class="darbo_laikas">
+                    <p>Pirmadienis-Penktadienis: 9-17</p>
+                    <p>Sestadienis: 10-15</p>
+                    <p>Sekmadienis: nedirbame</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="module" src="authentication.js"></script>
+<script src="header_animation.js"></script>
+<script src="slideshow.js"></script>
+</html>

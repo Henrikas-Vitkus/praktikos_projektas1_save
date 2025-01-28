@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kontaktai.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/52a9feb123.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="pagrindinis_logo_div">
+            <div class="pagrindinis_logo">Ihenrika</div>
+        </div>
+        <div class="header_mygtukai_div">
+            <button onclick="window.location.href='index.html';" class="pagrindinis">Pagrindinis</button>
+            <button onclick="window.location.href='appointment.html';" class="rezervacija">Rezervacija</button>
+            <button onclick="window.location.href='paslaugos.html';" class="paslaugos">Paslaugos</button>
+            <button onclick="window.location.href='galerija.html';" class="galerija">Galerija</button>
+            <button onclick="window.location.href='kontaktai.html';" class="kontaktai">Kontaktai</button>
+            <button id="logout_button">Atsijungti</button>
+            <div class="dropdown_menu" id="dropdownMenu"> 
+                <i class="fa-solid fa-bars" id="dropdownIcon"></i>
+                <div class="dropdown-content">
+                    <a href="index.html">Pagrindinis</a>
+                    <a href="appointment.html">Rezervacija</a>
+                    <a href="paslaugos.html">Paslaugos</a>
+                    <a href="galerija.html">Galerija</a>
+                    <a href="kontaktai.html">Kontaktai</a>
+                    <a href="login.html">Prisijungti</a>
+                </div>
+            </div>
+        </div> 
+    </header>
+    <div class="container1">
+        <div class="paslauga1">
+
+            <div class="paslauga_pavadinimas">
+                <p>Darbo laikas</p>
+            </div>
+            <hr style="margin: 0px; padding: 0px;">
+            <div class="kirpimai">
+                <p>Pirmadienis</p>
+                <p class="kaina">9:00-16:00</p>
+            </div>
+            <hr style="margin: 0px; padding: 0px;">
+            <div class="kirpimai">
+                <p>Antradienis</p>
+                <p class="kaina">9:00-16:00</p>
+            </div>
+            <hr style="margin: 0px; padding: 0px;"> 
+            <div class="kirpimai">
+                <p>Trečiadienis</p>
+                <p class="kaina">9:00-16:00</p>
+            </div>
+            <hr style="margin: 0px; padding: 0px;"> 
+            <div class="kirpimai">
+                <p>Ketvirtadienis</p>
+                <p class="kaina">9:00-16:00</p>
+            </div>
+            <hr style="margin: 0px; padding: 0px;">
+            <div class="kirpimai">
+                <p>Penktadienis</p>
+                <p class="kaina">9:00-15:00</p>
+            </div>
+            <hr style="margin: 0px; padding: 0px;">
+            <div class="kirpimai">
+                <p>Šeštadienis</p>
+                <p class="kaina">10:00-13:00</p>
+            </div>
+            <hr style="margin: 0px; padding: 0px;">
+            <div class="kirpimai">
+                <p>Sekmadienis</p>
+                <p class="kaina">Nedirbame</p>
+            </div>
+            <hr style="margin: 0px; padding: 0px;">
+        </div> 
+
+        <div class="google_maps_div">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2217.5865311956245!2d22.513284276732435!3d56.23337937326585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e58141379936b5%3A0x5ba034f177c7e367!2zQmHFvm55xI1pb3MgZy4gMTMsIFZpZWvFoW5pYWksIDg5NDkxIE1hxb5laWtpxbMgci4gc2F2Lg!5e0!3m2!1slt!2slt!4v1737131810629!5m2!1slt!2slt" 
+                width="550" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <form id="contactForm">
+            <div class="email_us_div">
+                <div class="parasykite_mums">
+                    <p>Parašykite mums</p>
+                </div> 
+                <div class="vardas_input_div">
+                    <input type="text" class="vardas_input" placeholder="Vardas">
+                </div>
+                <div class="email_input_div">
+                    <input type="text" class="email_input" placeholder="Gmail">
+                </div>
+                <div class="comment_input_div">
+                    <textarea class="comment_input" placeholder="Komentaras"></textarea>
+                </div>
+                <button class="siusti_komentara_button">Siūsti</button>
+            </div>
+        </form>
+
+        <div class="kontaktai_div">
+            <div class="placement_div">
+                <div class="rutulys">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="kontaktas_zodis">
+                    <p>Telefonas:</p>
+                    <div class="kontaktas0">
+                        <p>868877665</p>
+                    </div>
+                </div>
+            </div>
+            <div class="placement_div">
+                <div class="rutulys">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="kontaktas_zodis">
+                    <p>Paštas:</p>
+                    <div class="kontaktas0">
+                        <p>ihenrika.salon@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="placement_div">
+                <div class="rutulys">
+                    <i class="fa-solid fa-location-dot"></i> 
+                </div>
+                <div class="kontaktas_zodis">
+                    <p>Adresas:</p>
+                    <div class="kontaktas0">
+                        <p>Bažnyčios g. 13-1, Viekšniai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer_meniu1">
+                <p class="footer_meniu_pavadinimas">Meniu</p>
+                <div class="meniu_nuorodos">
+                    <a href="index.html">Pagrindinis</a>
+                    <a href="appointment.html">Rezervacija</a>
+                    <a href="paslaugos.html">Paslaugos</a>
+                    <a href="galerija.html">Galerija</a>
+                    <a href="kontaktai.html">Kontaktai</a>
+                </div>
+            </div>
+            <div class="footer_meniu">
+                <p class="footer_meniu_pavadinimas" >Susisiekime</p>
+                <div class="meniu_nuorodos">
+                    <div class="vieta">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Bažnyčios g. 13-1, Viekšniai</p>
+                    </div>
+                    <div class="telefonas">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>865544332</p>
+                    </div>
+                    <div class="gamilas">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>ihenrika.salon@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="darbo_laikas_div">
+                <div class="footer_meniu">
+                    <p class="footer_meniu_pavadinimas_laikas">Darbo laikas</p>   
+                    <div class="darbo_laikas">
+                        <p>Pirmadienis-Penktadienis: 9-17</p>
+                        <p>Šeštadienis: 10-15</p>
+                        <p>Sekmadienis: nedirbame</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> 
+    <script src="script.js"></script>
+</body>
+<script type="module" src="authentication.js"></script>
+<script src="header_animation.js"></script>
+<script src="dropdown.js"></script>
+</html>

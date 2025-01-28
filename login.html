@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisijungimas</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/52a9feb123.js" crossorigin="anonymous"></script>
+    <script type="module" src="login.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="pagrindinis_logo_div">
+            <div class="pagrindinis_logo">Ihenrika</div>
+        </div>
+        <div class="header_mygtukai_div">
+            <button onclick="window.location.href='index.html';" class="pagrindinis">Pagrindinis</button>
+            <button onclick="window.location.href='appointment.html';" class="rezervacija">Rezervacija</button>
+            <button onclick="window.location.href='paslaugos.html';" class="paslaugos">Paslaugos</button>
+            <button onclick="window.location.href='galerija.html';" class="galerija">Galerija</button>
+            <button onclick="window.location.href='kontaktai.html';" class="kontaktai">Kontaktai</button>
+            <button id="logout_button">Atsijungti</button>
+            <div class="dropdown_menu" id="dropdownMenu"> 
+                <i class="fa-solid fa-bars" id="dropdownIcon"></i>
+                <div class="dropdown-content">
+                    <a href="index.html">Pagrindinis</a>
+                    <a href="appointment.html">Rezervacija</a>
+                    <a href="paslaugos.html">Paslaugos</a>
+                    <a href="galerija.html">Galerija</a>
+                    <a href="kontaktai.html">Kontaktai</a>
+                    <a href="login.html">Prisijungti</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page_div">
+        <div class="create_acc_div">
+            <div class="create_acc_words">
+                <p>Prisijungti</p>
+            </div>
+            <div class="create_acc_input">
+                <input id="email_input" type="text" placeholder="Email">
+                <input id="password_input" type="password" placeholder="Slaptažodis">
+            </div>
+            <div class="button_div">
+                <button id="login_button" class="sukurti_button">Prisijungti</button>
+            </div>
+            <div class="sukurti_paskyra_div">
+                <a class="sukurti_paskyra" href="register.html">Sukurti paskyrą</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="authentication.js"></script>
+<script src="dropdown.js"></script>
+</html>
